@@ -27,7 +27,11 @@ class PerfilController extends Controller
     public function edit($id)
     {
         $perfil = User::where('id', '=', $id)->firstOrFail();
-        return view('perfil.edit', compact('perfil'));
+        if($perfil->tipoe == 1){
+            return view('perfil.edit', compact('perfil'));
+        }else{
+            return view('perfil.editCli', compact('perfil'));
+        }
     }
 
     public function update(UpdateUserRequest $request, $id)

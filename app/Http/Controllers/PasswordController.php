@@ -70,7 +70,11 @@ class PasswordController extends Controller
     public function edit($id)
     {
         $perfil = User::where('id', '=', $id)->firstOrFail();
-        return view('perfil.editPass', compact('perfil'));
+        if ($perfil->tipoc == 1) {
+            return view('perfil.editPassCli', compact('perfil'));
+        } else {
+            return view('perfil.editPass', compact('perfil'));
+        }
     }
 
     /**
