@@ -2,8 +2,10 @@
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>Servicio De Internet</h3>
-                <strong>SI</strong>
+
+                <img class="img-fluid" src="{{ asset('assets/img/portfolio/logo.webp') }}" alt="Logo de BIPNET">
+               <strong>BN</strong>
+                
             </div>
 
             <ul class="list-unstyled components">
